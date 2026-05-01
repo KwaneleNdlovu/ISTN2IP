@@ -26,6 +26,8 @@ namespace Shoes
         int adidas_samba_qty = 0;
         int adilette_qty = 0;
 
+        int quantityTracker = 0;
+
         public Form1()
         {
             InitializeComponent();
@@ -104,6 +106,33 @@ namespace Shoes
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void add_Click(object sender, EventArgs e)
+        {
+            quantityTracker += 1;
+            quantity.Text = quantityTracker.ToString();
+        }
+
+        private void total_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void quantity_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addToCart_Click(object sender, EventArgs e)
+        {
+            string cart = sName.Text + "       " + sPrice.Text + "                       " + quantity.Text + Environment.NewLine;
+            items.Text = cart;
+        }
+
+        private void addToCart_Click_1(object sender, EventArgs e)
         {
 
         }
