@@ -1,0 +1,11 @@
+C:\Users\anoth\source\repos\ISTN2IP\bin\Debug\Shoes.exe.config
+C:\Users\anoth\source\repos\ISTN2IP\bin\Debug\Shoes.exe
+C:\Users\anoth\source\repos\ISTN2IP\bin\Debug\Shoes.pdb
+C:\Users\anoth\source\repos\ISTN2IP\obj\Debug\Shoes.csproj.AssemblyReference.cache
+C:\Users\anoth\source\repos\ISTN2IP\obj\Debug\Shoes.Form1.resources
+C:\Users\anoth\source\repos\ISTN2IP\obj\Debug\Shoes.Properties.Resources.resources
+C:\Users\anoth\source\repos\ISTN2IP\obj\Debug\Shoes.csproj.GenerateResource.cache
+C:\Users\anoth\source\repos\ISTN2IP\obj\Debug\Shoes.csproj.CoreCompileInputs.cache
+C:\Users\anoth\source\repos\ISTN2IP\obj\Debug\Shoes.exe
+C:\Users\anoth\source\repos\ISTN2IP\obj\Debug\Shoes.pdb
+C:\Users\anoth\source\repos\ISTN2IP\obj\Debug\Shoes.RemoveItem.resources

@@ -42,10 +42,10 @@ namespace Shoes
 
             int totalWidth = listView1.Width;
 
-            listView1.Columns.Add("Sneaker Name", (int)(totalWidth * 0.4)); // 40%
+            listView1.Columns.Add("Sneaker Name", (int)(totalWidth * 0.3)); // 40%
             listView1.Columns.Add("Price", (int)(totalWidth * 0.2));        // 20%
             listView1.Columns.Add("Quantity", (int)(totalWidth * 0.2));     // 20%
-            listView1.Columns.Add("Total", (int)(totalWidth * 0.2));
+            listView1.Columns.Add("Total", (int)(totalWidth * 0.3));
         }
 
 
@@ -123,7 +123,7 @@ namespace Shoes
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            listView1.Items.Clear();
         }
 
         private void add_Click(object sender, EventArgs e)
@@ -186,6 +186,25 @@ namespace Shoes
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            List<ListViewItem> itemsToSend = new List<ListViewItem>();
+
+            foreach (ListViewItem item in listView1.Items)
+            {
+                itemsToSend.Add(item);
+            }
+
+            // Open Form2 and pass data
+            RemoveItem f2 = new RemoveItem(itemsToSend);
+            f2.Show();
         }
     }
 }

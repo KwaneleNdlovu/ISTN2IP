@@ -78,6 +78,7 @@
             this.receipt_btn = new System.Windows.Forms.Button();
             this.total = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -98,6 +99,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(16, 15);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
@@ -479,7 +481,7 @@
             this.items.Location = new System.Drawing.Point(843, 390);
             this.items.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.items.Name = "items";
-            this.items.Size = new System.Drawing.Size(0, 35);
+            this.items.Size = new System.Drawing.Size(0, 28);
             this.items.TabIndex = 11;
             this.items.Click += new System.EventHandler(this.items_Click);
             // 
@@ -498,7 +500,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1093, 318);
+            this.label7.Location = new System.Drawing.Point(1075, 317);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(154, 29);
@@ -509,7 +511,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(1345, 318);
+            this.label9.Location = new System.Drawing.Point(1315, 318);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(95, 29);
@@ -520,12 +522,13 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(1547, 318);
+            this.label10.Location = new System.Drawing.Point(1504, 317);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(61, 29);
             this.label10.TabIndex = 15;
             this.label10.Text = "Total";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label11
             // 
@@ -638,16 +641,30 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(864, 378);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(727, 152);
+            this.listView1.Size = new System.Drawing.Size(792, 174);
             this.listView1.TabIndex = 25;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.Font = new System.Drawing.Font("Britannic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(1418, 636);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(173, 66);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "REMOVE ITEM";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1668, 706);
+            this.ClientSize = new System.Drawing.Size(1677, 730);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.total);
             this.Controls.Add(this.receipt_btn);
@@ -740,6 +757,7 @@
         private System.Windows.Forms.Button receipt_btn;
         private System.Windows.Forms.Label total;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Button button1;
     }
 }
 
