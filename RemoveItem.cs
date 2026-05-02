@@ -12,16 +12,19 @@ namespace Shoes
 {
     public partial class RemoveItem : Form
     {
-        public RemoveItem(List<ListViewItem> items)
+        private Form1 mainform;
+        string theValue;
+        public RemoveItem(List<ListViewItem> items, Form1 form)
         {
             InitializeComponent();
+            mainform = form;
             LoadData(items);
             namelabel.Text = "ITEM NOT SELECTED";
             priceLabel.Text = "ITEM NOT SELECTED";
             totalLabel.Text = "ITEM NOT SELECTED";
 
-            pictureBox1.Image = Properties.Resources.loading;
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            imagePictureBox.Image = Properties.Resources.loading;
+            imagePictureBox.SizeMode = PictureBoxSizeMode.Zoom;
 
             pictureBox2.Image = Properties.Resources.guidebook;
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom; 
@@ -58,6 +61,43 @@ namespace Shoes
 
                 // we then have to update labels when selecting item
                 namelabel.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                theValue = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                string first = "Nike Air Max 90";
+                string second = "Jordan Women's 1 Mid";
+                string third = "Jordan Men's 1 Mid";
+                string forth = "Adidas Samba";
+                string fifth = "Adidas Adilette 22";
+                string sixth = "";
+
+                if (string.Equals(dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString(), first, StringComparison.OrdinalIgnoreCase))
+                {
+                    imagePictureBox.Image = Properties.Resources.original;
+                    imagePictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+
+                } else if (string.Equals(dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString(), second, StringComparison.OrdinalIgnoreCase))
+                {
+                    imagePictureBox.Image = Properties.Resources.Jordans_Women_s_1_Mid;
+                    imagePictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+
+                }
+                else if (string.Equals(dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString(), third, StringComparison.OrdinalIgnoreCase))
+                {
+                    imagePictureBox.Image = Properties.Resources.Jordan1_male_;
+                    imagePictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+
+                }
+                else if (string.Equals(dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString(), forth, StringComparison.OrdinalIgnoreCase))
+                {
+                    imagePictureBox.Image = Properties.Resources.adidas_samba;
+                    imagePictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+
+                }
+                else if (string.Equals(dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString(), fifth, StringComparison.OrdinalIgnoreCase))
+                {
+                    imagePictureBox.Image = Properties.Resources.adidas_adilette;
+                    imagePictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+
+                }
 
                 priceLabel.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
 
@@ -91,8 +131,8 @@ namespace Shoes
             totalLabel.Text = "ITEM NOT SELECTED";
             quantityTextBox.Clear();
 
-            pictureBox1.Image = Properties.Resources.loading;
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            imagePictureBox.Image = Properties.Resources.loading;
+            imagePictureBox.SizeMode = PictureBoxSizeMode.Zoom;
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -130,8 +170,14 @@ namespace Shoes
                 {
                     dataGridView1.Rows.RemoveAt(i);
                     setToDefault();
+                    mainform.RemoveItem(theValue);
                 }
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

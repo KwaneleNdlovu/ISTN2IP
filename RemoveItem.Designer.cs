@@ -46,7 +46,7 @@
             this.priceLabel = new System.Windows.Forms.Label();
             this.namelabel = new System.Windows.Forms.Label();
             this.quantityTextBox = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.imagePictureBox = new System.Windows.Forms.PictureBox();
             this.totalabel7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -62,7 +62,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imagePictureBox)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -192,7 +192,7 @@
             this.panel5.Controls.Add(this.priceLabel);
             this.panel5.Controls.Add(this.namelabel);
             this.panel5.Controls.Add(this.quantityTextBox);
-            this.panel5.Controls.Add(this.pictureBox1);
+            this.panel5.Controls.Add(this.imagePictureBox);
             this.panel5.Controls.Add(this.totalabel7);
             this.panel5.Controls.Add(this.label6);
             this.panel5.Controls.Add(this.label5);
@@ -249,13 +249,15 @@
             this.quantityTextBox.Size = new System.Drawing.Size(149, 22);
             this.quantityTextBox.TabIndex = 7;
             // 
-            // pictureBox1
+            // imagePictureBox
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(367, 38);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(330, 198);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.imagePictureBox.Image = global::Shoes.Properties.Resources.original;
+            this.imagePictureBox.Location = new System.Drawing.Point(367, 38);
+            this.imagePictureBox.Name = "imagePictureBox";
+            this.imagePictureBox.Size = new System.Drawing.Size(330, 198);
+            this.imagePictureBox.TabIndex = 4;
+            this.imagePictureBox.TabStop = false;
+            this.imagePictureBox.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // totalabel7
             // 
@@ -393,7 +395,7 @@
             this.panel2.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imagePictureBox)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -422,7 +424,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox quantityTextBox;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox imagePictureBox;
         private System.Windows.Forms.Label totalLabel;
         private System.Windows.Forms.Label priceLabel;
         private System.Windows.Forms.Label namelabel;

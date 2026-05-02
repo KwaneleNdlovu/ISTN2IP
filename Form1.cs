@@ -48,6 +48,18 @@ namespace Shoes
             listView1.Columns.Add("Total", (int)(totalWidth * 0.3));
         }
 
+        public void RemoveItem(string itemName)
+        {
+            foreach (ListViewItem item in listView1.Items)
+            {
+                if (item.SubItems[0].Text == itemName) // assuming column 2 is name
+                {
+                    listView1.Items.Remove(item);
+                    break;
+                }
+            }
+        }
+
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
@@ -203,7 +215,7 @@ namespace Shoes
             }
 
             // Open Form2 and pass data
-            RemoveItem f2 = new RemoveItem(itemsToSend);
+            RemoveItem f2 = new RemoveItem(itemsToSend, this);
             f2.Show();
         }
     }

@@ -132,7 +132,7 @@
             this.panel2.Controls.Add(this.maleJ1);
             this.panel2.Controls.Add(this.femaleJ1);
             this.panel2.Controls.Add(this.airmax);
-            this.panel2.Location = new System.Drawing.Point(16, 127);
+            this.panel2.Location = new System.Drawing.Point(15, 127);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(765, 576);

@@ -101,5 +101,20 @@
   <ItemGroup>
     <None Include="Resources\arrow.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adidas adilette.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adidas samba.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jordan1%28male%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jordans Women%27s 1 Mid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\original.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

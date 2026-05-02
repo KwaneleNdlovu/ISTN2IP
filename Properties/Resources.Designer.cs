@@ -63,6 +63,26 @@ namespace Shoes.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap adidas_adilette {
+            get {
+                object obj = ResourceManager.GetObject("adidas adilette", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap adidas_samba {
+            get {
+                object obj = ResourceManager.GetObject("adidas samba", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap arrow {
             get {
                 object obj = ResourceManager.GetObject("arrow", resourceCulture);
@@ -83,9 +103,39 @@ namespace Shoes.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Jordan1_male_ {
+            get {
+                object obj = ResourceManager.GetObject("Jordan1(male)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Jordans_Women_s_1_Mid {
+            get {
+                object obj = ResourceManager.GetObject("Jordans Women\'s 1 Mid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap loading {
             get {
                 object obj = ResourceManager.GetObject("loading", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap original {
+            get {
+                object obj = ResourceManager.GetObject("original", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
