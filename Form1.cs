@@ -31,7 +31,23 @@ namespace Shoes
         public Form1()
         {
             InitializeComponent();
+            this.Load += Form1_Load;
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            listView1.View = View.Details;
+            listView1.FullRowSelect = true;
+            listView1.GridLines = true;
+
+            int totalWidth = listView1.Width;
+
+            listView1.Columns.Add("Sneaker Name", (int)(totalWidth * 0.4)); // 40%
+            listView1.Columns.Add("Price", (int)(totalWidth * 0.2));        // 20%
+            listView1.Columns.Add("Quantity", (int)(totalWidth * 0.2));     // 20%
+            listView1.Columns.Add("Total", (int)(totalWidth * 0.2));
+        }
+
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
@@ -128,13 +144,48 @@ namespace Shoes
 
         private void addToCart_Click(object sender, EventArgs e)
         {
-            string cart = sName.Text + "       " + sPrice.Text + "                       " + quantity.Text + Environment.NewLine;
-            items.Text = cart;
+
+            ListViewItem item = new ListViewItem("Nike Shoes");
+            item.SubItems.Add("R999");
+
+            listView1.Items.Add(item);
         }
 
         private void addToCart_Click_1(object sender, EventArgs e)
         {
+            //string name = sName.Text;
+            //string price = sPrice.Text;
 
+            //ListViewItem item = new ListViewItem(name);
+            //item.SubItems.Add(price);
+
+            //listView1.Items.Add(item);
+            /////////////////
+            ///
+
+            string name = sName.Text;
+
+            
+            double price = Convert.ToDouble(sPrice.Text.Replace("R", "").Replace(",", "")); // This will then remove the "R" and the comman so that we can multiply the numbers
+
+            int qty = int.Parse(quantity.Text);
+
+            double total = price * qty;
+
+            // Create row
+            ListViewItem item = new ListViewItem(name); // the first column
+            item.SubItems.Add("R" + price.ToString("N2"));// the second column
+            item.SubItems.Add(qty.ToString());           // the third column  
+            item.SubItems.Add("R" + total.ToString("N2")); // the forth column
+
+            listView1.Items.Add(item);
+
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

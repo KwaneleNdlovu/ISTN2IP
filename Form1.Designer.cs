@@ -77,6 +77,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.receipt_btn = new System.Windows.Forms.Button();
             this.total = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -475,12 +476,11 @@
             // 
             this.items.AutoSize = true;
             this.items.Font = new System.Drawing.Font("Imprint MT Shadow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.items.Location = new System.Drawing.Point(867, 375);
+            this.items.Location = new System.Drawing.Point(843, 390);
             this.items.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.items.Name = "items";
-            this.items.Size = new System.Drawing.Size(706, 168);
+            this.items.Size = new System.Drawing.Size(0, 35);
             this.items.TabIndex = 11;
-            this.items.Text = resources.GetString("items.Text");
             this.items.Click += new System.EventHandler(this.items_Click);
             // 
             // label6
@@ -633,11 +633,22 @@
             this.total.Text = "R1000000";
             this.total.Click += new System.EventHandler(this.total_Click);
             // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(864, 378);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(727, 152);
+            this.listView1.TabIndex = 25;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1668, 706);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.total);
             this.Controls.Add(this.receipt_btn);
             this.Controls.Add(this.label15);
@@ -728,6 +739,7 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button receipt_btn;
         private System.Windows.Forms.Label total;
+        private System.Windows.Forms.ListView listView1;
     }
 }
 
