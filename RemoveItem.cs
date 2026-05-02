@@ -33,6 +33,36 @@ namespace Shoes
             button1.Image = resized;
             button1.TextImageRelation = TextImageRelation.ImageBeforeText;
             button1.ImageAlign = ContentAlignment.MiddleRight;
+
+            // ⭐ THIS IS THE MISSING PART
+            dataGridView1.CellClick += dataGridView1_CellClick;
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Only act on checkbox column (column 0)
+            if (e.RowIndex >= 0 && e.ColumnIndex == 0)
+            {
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    row.Cells[0].Value = false;
+                }
+
+                dataGridView1.Rows[e.RowIndex].Cells[0].Value = true;
+
+                // we then have to update labels when selecting item
+                namelabel.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+
+                priceLabel.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+
+                double price = Convert.ToDouble(priceLabel.Text.Replace("R", "").Replace(",", ""));
+
+                int quantity = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString().Replace("R", "").Replace(",", ""));
+                quantityTextBox.Text = quantity.ToString();
+
+                double finalValue = price * quantity;
+                totalLabel.Text = "R" + finalValue.ToString("N2");
+            }
         }
 
         private void LoadData(List<ListViewItem> items)
@@ -42,8 +72,8 @@ namespace Shoes
                 dataGridView1.Rows.Add(
                     false,
                     item.SubItems[0].Text,
-                    item.SubItems[1].Text,
-                    item.SubItems[2].Text
+                    item.SubItems[2].Text,
+                    item.SubItems[1].Text
                 );
             }
         }

@@ -30,39 +30,39 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Checkbox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.SneakerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.namelabel = new System.Windows.Forms.Label();
-            this.priceLabel = new System.Windows.Forms.Label();
-            this.totalLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.totalLabel = new System.Windows.Forms.Label();
+            this.priceLabel = new System.Windows.Forms.Label();
+            this.namelabel = new System.Windows.Forms.Label();
+            this.quantityTextBox = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.totalabel7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -81,40 +81,6 @@
             this.panel3.Size = new System.Drawing.Size(722, 481);
             this.panel3.TabIndex = 3;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.Window;
-            this.label2.Font = new System.Drawing.Font("Algerian", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(64, 18);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(582, 53);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "REMOVE ITEM FROM CART";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(27, 13);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(731, 91);
-            this.panel2.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Impact", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(18, 145);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(235, 54);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "CART ITEMS";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dataGridView1
             // 
@@ -165,6 +131,40 @@
             this.price.Name = "price";
             this.price.Width = 125;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.Window;
+            this.label2.Font = new System.Drawing.Font("Algerian", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(64, 18);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(582, 53);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "REMOVE ITEM FROM CART";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Location = new System.Drawing.Point(27, 13);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(731, 91);
+            this.panel2.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Impact", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(18, 145);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(232, 53);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "CART ITEMS";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ControlText;
@@ -189,9 +189,9 @@
             this.panel5.Controls.Add(this.totalLabel);
             this.panel5.Controls.Add(this.priceLabel);
             this.panel5.Controls.Add(this.namelabel);
-            this.panel5.Controls.Add(this.textBox3);
+            this.panel5.Controls.Add(this.quantityTextBox);
             this.panel5.Controls.Add(this.pictureBox1);
-            this.panel5.Controls.Add(this.label7);
+            this.panel5.Controls.Add(this.totalabel7);
             this.panel5.Controls.Add(this.label6);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.label4);
@@ -199,80 +199,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(716, 397);
             this.panel5.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(34, 38);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(129, 25);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Sneaker Name";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(34, 82);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(125, 25);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Sneaker Price";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(34, 130);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 25);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Quantity";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(34, 184);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 25);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Total:";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(187, 130);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(149, 22);
-            this.textBox3.TabIndex = 7;
-            // 
-            // namelabel
-            // 
-            this.namelabel.AutoSize = true;
-            this.namelabel.Location = new System.Drawing.Point(184, 46);
-            this.namelabel.Name = "namelabel";
-            this.namelabel.Size = new System.Drawing.Size(44, 16);
-            this.namelabel.TabIndex = 8;
-            this.namelabel.Text = "label8";
-            // 
-            // priceLabel
-            // 
-            this.priceLabel.AutoSize = true;
-            this.priceLabel.Location = new System.Drawing.Point(184, 90);
-            this.priceLabel.Name = "priceLabel";
-            this.priceLabel.Size = new System.Drawing.Size(44, 16);
-            this.priceLabel.TabIndex = 9;
-            this.priceLabel.Text = "label9";
-            // 
-            // totalLabel
-            // 
-            this.totalLabel.AutoSize = true;
-            this.totalLabel.Location = new System.Drawing.Point(184, 184);
-            this.totalLabel.Name = "totalLabel";
-            this.totalLabel.Size = new System.Drawing.Size(51, 16);
-            this.totalLabel.TabIndex = 10;
-            this.totalLabel.Text = "label10";
             // 
             // button1
             // 
@@ -286,6 +212,88 @@
             this.button1.Text = "  REMOVE SELECTED ITEM";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // totalLabel
+            // 
+            this.totalLabel.AutoSize = true;
+            this.totalLabel.Location = new System.Drawing.Point(184, 184);
+            this.totalLabel.Name = "totalLabel";
+            this.totalLabel.Size = new System.Drawing.Size(51, 16);
+            this.totalLabel.TabIndex = 10;
+            this.totalLabel.Text = "label10";
+            // 
+            // priceLabel
+            // 
+            this.priceLabel.AutoSize = true;
+            this.priceLabel.Location = new System.Drawing.Point(184, 90);
+            this.priceLabel.Name = "priceLabel";
+            this.priceLabel.Size = new System.Drawing.Size(44, 16);
+            this.priceLabel.TabIndex = 9;
+            this.priceLabel.Text = "label9";
+            // 
+            // namelabel
+            // 
+            this.namelabel.AutoSize = true;
+            this.namelabel.Location = new System.Drawing.Point(184, 46);
+            this.namelabel.Name = "namelabel";
+            this.namelabel.Size = new System.Drawing.Size(44, 16);
+            this.namelabel.TabIndex = 8;
+            this.namelabel.Text = "label8";
+            // 
+            // quantityTextBox
+            // 
+            this.quantityTextBox.Location = new System.Drawing.Point(187, 130);
+            this.quantityTextBox.Name = "quantityTextBox";
+            this.quantityTextBox.Size = new System.Drawing.Size(149, 22);
+            this.quantityTextBox.TabIndex = 7;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(367, 38);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(330, 198);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // totalabel7
+            // 
+            this.totalabel7.AutoSize = true;
+            this.totalabel7.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalabel7.Location = new System.Drawing.Point(34, 184);
+            this.totalabel7.Name = "totalabel7";
+            this.totalabel7.Size = new System.Drawing.Size(56, 25);
+            this.totalabel7.TabIndex = 3;
+            this.totalabel7.Text = "Total:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(34, 130);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(79, 25);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Quantity";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(34, 82);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(125, 25);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Sneaker Price";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(34, 38);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(129, 25);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Sneaker Name";
+            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.pictureBox2);
@@ -295,6 +303,26 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(716, 196);
             this.panel6.TabIndex = 8;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(22, 58);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(103, 69);
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(148, 77);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(403, 40);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Select the Item(s) you want to remove from the cart.\r\nClick the \"Remove Selected " +
+    "Item\" button to remove it\r\n";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label8
             // 
@@ -306,18 +334,6 @@
             this.label8.TabIndex = 9;
             this.label8.Text = "INSTRUCTIONS";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(148, 77);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(504, 50);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Select the Item(s) you want to remove from the cart.\r\nClick the \"Remove Selected " +
-    "Item\" button to remove it\r\n";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
-            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.SystemColors.ControlText;
@@ -325,22 +341,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1542, 10);
             this.panel7.TabIndex = 9;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(22, 58);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(103, 69);
-            this.pictureBox2.TabIndex = 10;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(367, 38);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(330, 198);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // RemoveItem
             // 
@@ -359,15 +359,15 @@
             this.Name = "RemoveItem";
             this.Text = "RemoveItem";
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -388,11 +388,11 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label totalabel7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox quantityTextBox;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label totalLabel;
         private System.Windows.Forms.Label priceLabel;
