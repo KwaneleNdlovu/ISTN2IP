@@ -12,21 +12,8 @@ namespace Shoes
 {
     public partial class Form1 : Form
     {
-        double airmaxprice = 2999;
-        double womenJ1 = 2699;
-        double menJ1 = 2999;
-        double menJ1_2 = 3199;
-        double adidas_samba = 1999;
-        double adilette = 1199;
-
-        int airmaxprice_qty = 0;
-        int womenJ1_qty = 0;
-        int menJ1_qty = 0;
-        int menJ1_2_qty = 0;
-        int adidas_samba_qty = 0;
-        int adilette_qty = 0;
-
         int quantityTracker = 0;
+        double maxTotal = 0;
 
         public Form1()
         {
@@ -54,6 +41,11 @@ namespace Shoes
             {
                 if (item.SubItems[0].Text == itemName) // assuming column 2 is name
                 {
+                    string price = item.SubItems[1].Text;
+                    price = price.Replace("R", "").Replace(",", "");
+                    maxTotal -=double.Parse(price);
+                    totalLbl.Text = "R" + maxTotal.ToString();
+
                     listView1.Items.Remove(item);
                     break;
                 }
@@ -81,8 +73,8 @@ namespace Shoes
             sName.Text = "Nike Air Max 90";
             sPrice.Text = "R2,999.00";
 
-            airmaxprice_qty++;
-            quantity.Text = airmaxprice_qty.ToString();
+            quantityTracker = 0;
+            quantity.Text = "0";
         }
 
         private void femaleJ1_Click(object sender, EventArgs e)
@@ -90,32 +82,44 @@ namespace Shoes
             sName.Text = "Jordan Women's 1 Mid";
             sPrice.Text = "R2,699.00";
 
-            womenJ1_qty++;
-            quantity.Text = womenJ1_qty.ToString();
+            quantityTracker = 0;
+            quantity.Text = "0";
         }
 
         private void maleJ1_Click(object sender, EventArgs e)
         {
             sName.Text = "Jordan Men's 1 Mid";
             sPrice.Text = "R2,999.00";
+
+            quantityTracker = 0;
+            quantity.Text = "0";
         }
 
         private void manJ1_Click(object sender, EventArgs e)
         {
             sName.Text = "Jordan Men's 1 Mid";
             sPrice.Text = "R3,199.00";
+
+            quantityTracker = 0;
+            quantity.Text = "0";
         }
 
         private void samba_Click(object sender, EventArgs e)
         {
             sName.Text = "Adidas Samba";
             sPrice.Text = "R1,999.00";
+
+            quantityTracker = 0;
+            quantity.Text = "0";
         }
 
         private void slides_Click(object sender, EventArgs e)
         {
             sName.Text = "Adidas Adilette 22";
             sPrice.Text = "R1,199.00";
+
+            quantityTracker = 0;
+            quantity.Text = "0";
         }
 
         private void items_Click(object sender, EventArgs e)
@@ -140,8 +144,11 @@ namespace Shoes
 
         private void add_Click(object sender, EventArgs e)
         {
-            quantityTracker += 1;
-            quantity.Text = quantityTracker.ToString();
+            if (sName.Text != "")
+            {
+                quantityTracker += 1;
+                quantity.Text = quantityTracker.ToString();
+            }
         }
 
         private void total_Click(object sender, EventArgs e)
@@ -154,14 +161,6 @@ namespace Shoes
 
         }
 
-        private void addToCart_Click(object sender, EventArgs e)
-        {
-
-            ListViewItem item = new ListViewItem("Nike Shoes");
-            item.SubItems.Add("R999");
-
-            listView1.Items.Add(item);
-        }
 
         private void addToCart_Click_1(object sender, EventArgs e)
         {
@@ -183,15 +182,20 @@ namespace Shoes
             int qty = int.Parse(quantity.Text);
 
             double total = price * qty;
+            if (qty > 0)
+            {
+                // Create row
+                ListViewItem item = new ListViewItem(name); // the first column
+                item.SubItems.Add("R" + price.ToString("N2"));// the second column
+                item.SubItems.Add(qty.ToString());           // the third column  
+                item.SubItems.Add("R" + total.ToString("N2")); // the forth column
 
-            // Create row
-            ListViewItem item = new ListViewItem(name); // the first column
-            item.SubItems.Add("R" + price.ToString("N2"));// the second column
-            item.SubItems.Add(qty.ToString());           // the third column  
-            item.SubItems.Add("R" + total.ToString("N2")); // the forth column
+                listView1.Items.Add(item);
 
-            listView1.Items.Add(item);
-
+                maxTotal += total;
+                totalLbl.Text = "R" + maxTotal.ToString();
+                quantityTracker = 0;
+            }
 
         }
 
@@ -217,6 +221,59 @@ namespace Shoes
             // Open Form2 and pass data
             RemoveItem f2 = new RemoveItem(itemsToSend, this);
             f2.Show();
+        }
+
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        public string buildReceipt()
+        {
+            string receipt = "";
+
+            for (int i = 0; i < listView1.Items.Count; i++)
+            {
+                string name = listView1.Items[i].SubItems[0].Text.PadRight(25);
+                string price = listView1.Items[i].SubItems[1].Text.PadRight(12);
+                string qty = listView1.Items[i].SubItems[2].Text.PadRight(5);
+                string total = listView1.Items[i].SubItems[3].Text.PadLeft(10);
+
+                receipt += name + price + qty + total + "\n";
+            }
+
+            receipt += "\n\n_________________________________________________________\n" +
+                "\nTotal:".PadRight(45) + "R" + maxTotal.ToString();
+
+            return receipt;
+        }
+
+        private void minus_Click(object sender, EventArgs e)
+        {
+            if (sName.Text != "")
+            {
+                if (quantityTracker > 0)
+                {
+                    quantityTracker--;
+                    quantity.Text = quantityTracker.ToString();
+                }
+
+                if (quantityTracker == 0)
+                {
+                    quantity.Text = "";
+                    sName.Text = "";
+                    sPrice.Text = "";
+                }
+            }
+        }
+
+        private void pay_btn_Click(object sender, EventArgs e)
+        {
+            Payment payment = new Payment();
+            payment.total = maxTotal;
+            payment.receiptData = buildReceipt();
+            this.Hide();
+            payment.ShowDialog();
         }
     }
 }

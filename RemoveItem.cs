@@ -39,9 +39,9 @@ namespace Shoes
 
             Image resizedBack = new Bitmap(Properties.Resources.arrow, new Size(20, 20)); // will then retrieve the image from the resource folder in the project folder
 
-            button2.Image = resizedBack;
-            button2.TextImageRelation = TextImageRelation.ImageBeforeText;
-            button2.ImageAlign = ContentAlignment.MiddleRight;
+            backbtn.Image = resizedBack;
+            backbtn.TextImageRelation = TextImageRelation.ImageBeforeText;
+            backbtn.ImageAlign = ContentAlignment.MiddleRight;
 
             // ⭐ THIS IS THE MISSING PART
             dataGridView1.CellClick += dataGridView1_CellClick;
@@ -101,7 +101,7 @@ namespace Shoes
 
                 priceLabel.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
 
-                double price = Convert.ToDouble(priceLabel.Text.Replace("R", "").Replace(",", ""));
+                double price = double.Parse(priceLabel.Text.Replace("R", "").Replace(",", ""));
 
                 int quantity = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString().Replace("R", "").Replace(",", ""));
                 quantityTextBox.Text = quantity.ToString();
@@ -179,5 +179,14 @@ namespace Shoes
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           
+            this.Hide();
+            
+        }
+
+        
     }
 }

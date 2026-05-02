@@ -56,8 +56,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.pay_btn = new System.Windows.Forms.Button();
+            this.backbtn = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -70,17 +69,19 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlText;
-            this.panel1.Location = new System.Drawing.Point(2, 132);
+            this.panel1.Location = new System.Drawing.Point(2, 107);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(772, 10);
+            this.panel1.Size = new System.Drawing.Size(579, 8);
             this.panel1.TabIndex = 0;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.dataGridView1);
-            this.panel3.Location = new System.Drawing.Point(27, 202);
+            this.panel3.Location = new System.Drawing.Point(20, 164);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(722, 481);
+            this.panel3.Size = new System.Drawing.Size(542, 391);
             this.panel3.TabIndex = 3;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -97,11 +98,12 @@
             this.quantity,
             this.price});
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 15);
+            this.dataGridView1.Location = new System.Drawing.Point(11, 12);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(704, 442);
+            this.dataGridView1.Size = new System.Drawing.Size(528, 359);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -138,10 +140,9 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.Window;
             this.label2.Font = new System.Drawing.Font("Algerian", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(64, 18);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(48, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(582, 53);
+            this.label2.Size = new System.Drawing.Size(459, 41);
             this.label2.TabIndex = 0;
             this.label2.Text = "REMOVE ITEM FROM CART";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -150,19 +151,19 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(27, 13);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(20, 11);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(731, 91);
+            this.panel2.Size = new System.Drawing.Size(548, 74);
             this.panel2.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Impact", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(18, 145);
+            this.label1.Location = new System.Drawing.Point(14, 118);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(232, 53);
+            this.label1.Size = new System.Drawing.Size(190, 43);
             this.label1.TabIndex = 4;
             this.label1.Text = "CART ITEMS";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -170,18 +171,20 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ControlText;
-            this.panel4.Location = new System.Drawing.Point(764, 1);
+            this.panel4.Location = new System.Drawing.Point(573, 1);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(10, 695);
+            this.panel4.Size = new System.Drawing.Size(8, 565);
             this.panel4.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Impact", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(792, 13);
+            this.label3.Location = new System.Drawing.Point(594, 11);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(245, 45);
+            this.label3.Size = new System.Drawing.Size(203, 37);
             this.label3.TabIndex = 6;
             this.label3.Text = "SELECTED ITEM";
             // 
@@ -197,19 +200,19 @@
             this.panel5.Controls.Add(this.label6);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.label4);
-            this.panel5.Location = new System.Drawing.Point(800, 63);
+            this.panel5.Location = new System.Drawing.Point(600, 51);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(716, 397);
+            this.panel5.Size = new System.Drawing.Size(537, 323);
             this.panel5.TabIndex = 7;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Red;
             this.button1.Font = new System.Drawing.Font("Britannic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(131, 291);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(98, 236);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(451, 66);
+            this.button1.Size = new System.Drawing.Size(338, 54);
             this.button1.TabIndex = 27;
             this.button1.Text = "  REMOVE SELECTED ITEM";
             this.button1.UseVisualStyleBackColor = false;
@@ -218,43 +221,46 @@
             // totalLabel
             // 
             this.totalLabel.AutoSize = true;
-            this.totalLabel.Location = new System.Drawing.Point(184, 184);
+            this.totalLabel.Location = new System.Drawing.Point(138, 150);
+            this.totalLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalLabel.Name = "totalLabel";
-            this.totalLabel.Size = new System.Drawing.Size(51, 16);
+            this.totalLabel.Size = new System.Drawing.Size(0, 13);
             this.totalLabel.TabIndex = 10;
-            this.totalLabel.Text = "label10";
             // 
             // priceLabel
             // 
             this.priceLabel.AutoSize = true;
-            this.priceLabel.Location = new System.Drawing.Point(184, 90);
+            this.priceLabel.Location = new System.Drawing.Point(138, 73);
+            this.priceLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.priceLabel.Name = "priceLabel";
-            this.priceLabel.Size = new System.Drawing.Size(44, 16);
+            this.priceLabel.Size = new System.Drawing.Size(0, 13);
             this.priceLabel.TabIndex = 9;
-            this.priceLabel.Text = "label9";
             // 
             // namelabel
             // 
             this.namelabel.AutoSize = true;
-            this.namelabel.Location = new System.Drawing.Point(184, 46);
+            this.namelabel.Location = new System.Drawing.Point(138, 37);
+            this.namelabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.namelabel.Name = "namelabel";
-            this.namelabel.Size = new System.Drawing.Size(44, 16);
+            this.namelabel.Size = new System.Drawing.Size(0, 13);
             this.namelabel.TabIndex = 8;
-            this.namelabel.Text = "label8";
             // 
             // quantityTextBox
             // 
-            this.quantityTextBox.Location = new System.Drawing.Point(187, 130);
+            this.quantityTextBox.Enabled = false;
+            this.quantityTextBox.Location = new System.Drawing.Point(140, 106);
+            this.quantityTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.quantityTextBox.Name = "quantityTextBox";
-            this.quantityTextBox.Size = new System.Drawing.Size(149, 22);
+            this.quantityTextBox.Size = new System.Drawing.Size(113, 20);
             this.quantityTextBox.TabIndex = 7;
             // 
             // imagePictureBox
             // 
             this.imagePictureBox.Image = global::Shoes.Properties.Resources.original;
-            this.imagePictureBox.Location = new System.Drawing.Point(367, 38);
+            this.imagePictureBox.Location = new System.Drawing.Point(275, 31);
+            this.imagePictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.imagePictureBox.Name = "imagePictureBox";
-            this.imagePictureBox.Size = new System.Drawing.Size(330, 198);
+            this.imagePictureBox.Size = new System.Drawing.Size(248, 161);
             this.imagePictureBox.TabIndex = 4;
             this.imagePictureBox.TabStop = false;
             this.imagePictureBox.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -263,9 +269,10 @@
             // 
             this.totalabel7.AutoSize = true;
             this.totalabel7.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalabel7.Location = new System.Drawing.Point(34, 184);
+            this.totalabel7.Location = new System.Drawing.Point(26, 150);
+            this.totalabel7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalabel7.Name = "totalabel7";
-            this.totalabel7.Size = new System.Drawing.Size(56, 25);
+            this.totalabel7.Size = new System.Drawing.Size(44, 20);
             this.totalabel7.TabIndex = 3;
             this.totalabel7.Text = "Total:";
             // 
@@ -273,9 +280,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(34, 130);
+            this.label6.Location = new System.Drawing.Point(26, 106);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 25);
+            this.label6.Size = new System.Drawing.Size(63, 20);
             this.label6.TabIndex = 2;
             this.label6.Text = "Quantity";
             // 
@@ -283,9 +291,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(34, 82);
+            this.label5.Location = new System.Drawing.Point(26, 67);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(125, 25);
+            this.label5.Size = new System.Drawing.Size(100, 20);
             this.label5.TabIndex = 1;
             this.label5.Text = "Sneaker Price";
             // 
@@ -293,9 +302,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(34, 38);
+            this.label4.Location = new System.Drawing.Point(26, 31);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(129, 25);
+            this.label4.Size = new System.Drawing.Size(103, 20);
             this.label4.TabIndex = 0;
             this.label4.Text = "Sneaker Name";
             // 
@@ -304,16 +314,18 @@
             this.panel6.Controls.Add(this.pictureBox2);
             this.panel6.Controls.Add(this.label9);
             this.panel6.Controls.Add(this.label8);
-            this.panel6.Location = new System.Drawing.Point(800, 482);
+            this.panel6.Location = new System.Drawing.Point(600, 392);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(716, 196);
+            this.panel6.Size = new System.Drawing.Size(537, 159);
             this.panel6.TabIndex = 8;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(22, 58);
+            this.pictureBox2.Location = new System.Drawing.Point(16, 47);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(103, 69);
+            this.pictureBox2.Size = new System.Drawing.Size(77, 56);
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
             // 
@@ -321,9 +333,10 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(148, 77);
+            this.label9.Location = new System.Drawing.Point(111, 63);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(403, 40);
+            this.label9.Size = new System.Drawing.Size(338, 34);
             this.label9.TabIndex = 9;
             this.label9.Text = "Select the Item(s) you want to remove from the cart.\r\nClick the \"Remove Selected " +
     "Item\" button to remove it\r\n";
@@ -333,51 +346,40 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(17, 12);
+            this.label8.Location = new System.Drawing.Point(13, 10);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(159, 28);
+            this.label8.Size = new System.Drawing.Size(131, 23);
             this.label8.TabIndex = 9;
             this.label8.Text = "INSTRUCTIONS";
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.SystemColors.ControlText;
-            this.panel7.Location = new System.Drawing.Point(12, 689);
+            this.panel7.Location = new System.Drawing.Point(9, 560);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1542, 10);
+            this.panel7.Size = new System.Drawing.Size(1156, 8);
             this.panel7.TabIndex = 9;
             // 
-            // button2
+            // backbtn
             // 
-            this.button2.BackColor = System.Drawing.Color.Red;
-            this.button2.Font = new System.Drawing.Font("Britannic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(1301, 704);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(215, 66);
-            this.button2.TabIndex = 28;
-            this.button2.Text = "  BACK";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // pay_btn
-            // 
-            this.pay_btn.BackColor = System.Drawing.Color.LimeGreen;
-            this.pay_btn.Font = new System.Drawing.Font("Britannic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pay_btn.Location = new System.Drawing.Point(1111, 706);
-            this.pay_btn.Margin = new System.Windows.Forms.Padding(4);
-            this.pay_btn.Name = "pay_btn";
-            this.pay_btn.Size = new System.Drawing.Size(173, 64);
-            this.pay_btn.TabIndex = 29;
-            this.pay_btn.Text = "CHECKOUT";
-            this.pay_btn.UseVisualStyleBackColor = false;
+            this.backbtn.BackColor = System.Drawing.Color.Red;
+            this.backbtn.Font = new System.Drawing.Font("Britannic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backbtn.Location = new System.Drawing.Point(976, 572);
+            this.backbtn.Name = "backbtn";
+            this.backbtn.Size = new System.Drawing.Size(161, 54);
+            this.backbtn.TabIndex = 28;
+            this.backbtn.Text = "  BACK";
+            this.backbtn.UseVisualStyleBackColor = false;
+            this.backbtn.Click += new System.EventHandler(this.button2_Click);
             // 
             // RemoveItem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1566, 783);
-            this.Controls.Add(this.pay_btn);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(1174, 636);
+            this.Controls.Add(this.backbtn);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
@@ -387,6 +389,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RemoveItem";
             this.Text = "RemoveItem";
             this.panel3.ResumeLayout(false);
@@ -434,7 +437,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button pay_btn;
+        private System.Windows.Forms.Button backbtn;
     }
 }
