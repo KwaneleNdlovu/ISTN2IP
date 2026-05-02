@@ -56,6 +56,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.pay_btn = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -211,6 +213,7 @@
             this.button1.TabIndex = 27;
             this.button1.Text = "  REMOVE SELECTED ITEM";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // totalLabel
             // 
@@ -342,11 +345,37 @@
             this.panel7.Size = new System.Drawing.Size(1542, 10);
             this.panel7.TabIndex = 9;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Red;
+            this.button2.Font = new System.Drawing.Font("Britannic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(1301, 704);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(215, 66);
+            this.button2.TabIndex = 28;
+            this.button2.Text = "  BACK";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // pay_btn
+            // 
+            this.pay_btn.BackColor = System.Drawing.Color.LimeGreen;
+            this.pay_btn.Font = new System.Drawing.Font("Britannic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pay_btn.Location = new System.Drawing.Point(1111, 706);
+            this.pay_btn.Margin = new System.Windows.Forms.Padding(4);
+            this.pay_btn.Name = "pay_btn";
+            this.pay_btn.Size = new System.Drawing.Size(173, 64);
+            this.pay_btn.TabIndex = 29;
+            this.pay_btn.Text = "CHECKOUT";
+            this.pay_btn.UseVisualStyleBackColor = false;
+            // 
             // RemoveItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1566, 761);
+            this.ClientSize = new System.Drawing.Size(1566, 783);
+            this.Controls.Add(this.pay_btn);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
@@ -403,5 +432,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button pay_btn;
     }
 }

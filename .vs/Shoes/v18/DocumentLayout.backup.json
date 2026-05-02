@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{B81555DB-B345-408A-93AE-D027111867E0}|Shoes.csproj|solutionrelative:removeitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B81555DB-B345-408A-93AE-D027111867E0}|Shoes.csproj|C:\\Users\\anoth\\source\\repos\\ISTN2IP\\removeitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{B81555DB-B345-408A-93AE-D027111867E0}|Shoes.csproj|c:\\users\\anoth\\source\\repos\\istn2ip\\removeitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{B81555DB-B345-408A-93AE-D027111867E0}|Shoes.csproj|solutionrelative:removeitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B81555DB-B345-408A-93AE-D027111867E0}|Shoes.csproj|C:\\Users\\anoth\\source\\repos\\ISTN2IP\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B81555DB-B345-408A-93AE-D027111867E0}|Shoes.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B81555DB-B345-408A-93AE-D027111867E0}|Shoes.csproj|C:\\Users\\anoth\\source\\repos\\ISTN2IP\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B81555DB-B345-408A-93AE-D027111867E0}|Shoes.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B81555DB-B345-408A-93AE-D027111867E0}|Shoes.csproj|c:\\users\\anoth\\source\\repos\\istn2ip\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B81555DB-B345-408A-93AE-D027111867E0}|Shoes.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,20 +36,20 @@
               "RelativeDocumentMoniker": "RemoveItem.cs",
               "ToolTip": "C:\\Users\\anoth\\source\\repos\\ISTN2IP\\RemoveItem.cs",
               "RelativeToolTip": "RemoveItem.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAswDwAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-02T10:35:57.471Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\anoth\\source\\repos\\ISTN2IP\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\anoth\\source\\repos\\ISTN2IP\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAJQAAAAAAAAAAIAwwLAAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAwwJsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-02T09:28:33.701Z",
               "EditorCaption": ""
@@ -89,7 +89,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\anoth\\source\\repos\\ISTN2IP\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",

@@ -34,6 +34,12 @@ namespace Shoes
             button1.TextImageRelation = TextImageRelation.ImageBeforeText;
             button1.ImageAlign = ContentAlignment.MiddleRight;
 
+            Image resizedBack = new Bitmap(Properties.Resources.arrow, new Size(20, 20)); // will then retrieve the image from the resource folder in the project folder
+
+            button2.Image = resizedBack;
+            button2.TextImageRelation = TextImageRelation.ImageBeforeText;
+            button2.ImageAlign = ContentAlignment.MiddleRight;
+
             // ⭐ THIS IS THE MISSING PART
             dataGridView1.CellClick += dataGridView1_CellClick;
         }
@@ -78,6 +84,17 @@ namespace Shoes
             }
         }
 
+        private void setToDefault()
+        {
+            namelabel.Text = "ITEM NOT SELECTED";
+            priceLabel.Text = "ITEM NOT SELECTED";
+            totalLabel.Text = "ITEM NOT SELECTED";
+            quantityTextBox.Clear();
+
+            pictureBox1.Image = Properties.Resources.loading;
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+        }
+
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
@@ -101,6 +118,20 @@ namespace Shoes
         private void label9_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            for (int i = dataGridView1.Rows.Count - 1; i >= 0; i--)
+            {
+                bool isChecked = Convert.ToBoolean(dataGridView1.Rows[i].Cells[0].Value);
+
+                if (isChecked)
+                {
+                    dataGridView1.Rows.RemoveAt(i);
+                    setToDefault();
+                }
+            }
         }
     }
 }
