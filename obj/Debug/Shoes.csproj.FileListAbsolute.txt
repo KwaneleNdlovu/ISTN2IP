@@ -23,3 +23,5 @@ C:\Users\Student\Downloads\ISTN2IP\obj\Debug\Shoes.exe
 C:\Users\Student\Downloads\ISTN2IP\obj\Debug\Shoes.pdb
 C:\Users\Student\Downloads\ISTN2IP\obj\Debug\Shoes.Payment.resources
 C:\Users\Student\Downloads\ISTN2IP\obj\Debug\Shoes.Receipt.resources
+C:\Users\anoth\source\repos\ISTN2IP\obj\Debug\Shoes.Payment.resources
+C:\Users\anoth\source\repos\ISTN2IP\obj\Debug\Shoes.Receipt.resources

@@ -14,11 +14,11 @@ namespace Shoes
     {
         private Form1 mainform;
         string theValue;
-        public RemoveItem(List<ListViewItem> items, Form1 form)
+        public RemoveItem(List<ListViewItem> items, Form1 form) // when i create a new window, i have to get the data from the previous window so that i can  use that data for this window
         {
             InitializeComponent();
             mainform = form;
-            LoadData(items);
+            LoadData(items); // I have to load the data i got from the previus window
             namelabel.Text = "ITEM NOT SELECTED";
             priceLabel.Text = "ITEM NOT SELECTED";
             totalLabel.Text = "ITEM NOT SELECTED";
@@ -27,11 +27,11 @@ namespace Shoes
             imagePictureBox.SizeMode = PictureBoxSizeMode.Zoom;
 
             pictureBox2.Image = Properties.Resources.guidebook;
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom; 
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom; // so the image can fit neatly in the picturebox
 
             
 
-            Image resized = new Bitmap(Properties.Resources.trash, new Size(20, 20)); // will then retrieve the image from the resource folder in the project folder
+            Image resized = new Bitmap(Properties.Resources.trash, new Size(20, 20)); // will then retrieve the image from the resource folder in the project folder, and resize it neatly to fit in the buttons
 
             button1.Image = resized;
             button1.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -43,11 +43,11 @@ namespace Shoes
             backbtn.TextImageRelation = TextImageRelation.ImageBeforeText;
             backbtn.ImageAlign = ContentAlignment.MiddleRight;
 
-            // ⭐ THIS IS THE MISSING PART
+            
             dataGridView1.CellClick += dataGridView1_CellClick;
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e) // this method will allow me to specifically select the row, one at a time
         {
             // Only act on checkbox column (column 0)
             if (e.RowIndex >= 0 && e.ColumnIndex == 0)
@@ -60,16 +60,15 @@ namespace Shoes
                 dataGridView1.Rows[e.RowIndex].Cells[0].Value = true;
 
                 // we then have to update labels when selecting item
-                namelabel.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                theValue = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                namelabel.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString(); // retrive the name of the sneaker
+                theValue = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString(); 
                 string first = "Nike Air Max 90";
                 string second = "Jordan Women's 1 Mid";
                 string third = "Jordan Men's 1 Mid";
                 string forth = "Adidas Samba";
                 string fifth = "Adidas Adilette 22";
-                string sixth = "";
-
-                if (string.Equals(dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString(), first, StringComparison.OrdinalIgnoreCase))
+                
+                if (string.Equals(dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString(), first, StringComparison.OrdinalIgnoreCase)) // I want to compare the strings so that i can allocate the correct image in the picture box //
                 {
                     imagePictureBox.Image = Properties.Resources.original;
                     imagePictureBox.SizeMode = PictureBoxSizeMode.Zoom;
@@ -99,11 +98,11 @@ namespace Shoes
 
                 }
 
-                priceLabel.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                priceLabel.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();// retrive the price of the sneaker
 
                 double price = double.Parse(priceLabel.Text.Replace("R", "").Replace(",", ""));
 
-                int quantity = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString().Replace("R", "").Replace(",", ""));
+                int quantity = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString().Replace("R", "").Replace(",", ""));// I have to remove the strings in the number so that i can convert into a double
                 quantityTextBox.Text = quantity.ToString();
 
                 double finalValue = price * quantity;
@@ -111,7 +110,7 @@ namespace Shoes
             }
         }
 
-        private void LoadData(List<ListViewItem> items)
+        private void LoadData(List<ListViewItem> items) // This method will then allow me to add all of the elements into the datagridview 
         {
             foreach (ListViewItem item in items)
             {
@@ -124,7 +123,7 @@ namespace Shoes
             }
         }
 
-        private void setToDefault()
+        private void setToDefault() // so, after removing the product, i have to set these products back to their default images and labels
         {
             namelabel.Text = "ITEM NOT SELECTED";
             priceLabel.Text = "ITEM NOT SELECTED";
@@ -160,7 +159,7 @@ namespace Shoes
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) // this method will allow me to delete what  i had selected in the datagridview, then i will pass this method above
         {
             for (int i = dataGridView1.Rows.Count - 1; i >= 0; i--)
             {
@@ -183,7 +182,7 @@ namespace Shoes
         private void button2_Click(object sender, EventArgs e)
         {
            
-            this.Hide();
+            this.Hide(); // when i click back, i show should leave this window and continue on the other window
             
         }
 
