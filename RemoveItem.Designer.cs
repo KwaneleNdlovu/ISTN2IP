@@ -153,7 +153,7 @@
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(27, 14);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(731, 91);
             this.panel2.TabIndex = 2;
@@ -211,7 +211,7 @@
             this.button1.BackColor = System.Drawing.Color.Red;
             this.button1.Font = new System.Drawing.Font("Britannic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(131, 290);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(451, 66);
             this.button1.TabIndex = 27;
@@ -359,7 +359,7 @@
             this.backbtn.BackColor = System.Drawing.Color.Red;
             this.backbtn.Font = new System.Drawing.Font("Britannic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backbtn.Location = new System.Drawing.Point(1301, 704);
-            this.backbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.backbtn.Margin = new System.Windows.Forms.Padding(4);
             this.backbtn.Name = "backbtn";
             this.backbtn.Size = new System.Drawing.Size(215, 66);
             this.backbtn.TabIndex = 28;
@@ -371,7 +371,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1252, 626);
+            this.ClientSize = new System.Drawing.Size(1593, 781);
             this.Controls.Add(this.backbtn);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
